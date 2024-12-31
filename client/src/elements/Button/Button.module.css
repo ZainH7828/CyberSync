@@ -1,0 +1,70 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  border-radius: 0.625rem;
+  outline: 0;
+  border: 0;
+  gap: 0.5rem;
+  overflow: hidden;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
+.button > svg {
+  height: 1rem;
+}
+
+.button > span {
+  white-space: nowrap;
+}
+
+.button.primaryOutlined {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.button.primaryOutlinedThin {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.button.primary,
+.button.primaryOutlined:hover,
+.button.primaryOutlinedThin:hover {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.button.primary:disabled {
+  background: var(--primary-extra-light);
+  color: var(--primary);
+}
+
+.button.primaryLight {
+  background: var(--primary-extra-x-light);
+  color: var(--primary);
+}
+
+.button.danger {
+  background: var(--danger);
+  color: var(--text-light);
+}
+
+@media screen and (max-width: 576px) {
+  .button {
+    padding: 0.5625rem 1.25rem;
+  }
+}

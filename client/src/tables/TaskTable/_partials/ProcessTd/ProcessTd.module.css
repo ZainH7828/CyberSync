@@ -1,0 +1,18 @@
+.progressTd {
+  width: 12rem;
+}
+
+.progressArea {
+  border: 1px solid #000;
+  padding: 0.125rem;
+  border-radius: 0.375rem;
+}
+
+.progressArea > .progress {
+  font-size: 0.8175rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.125rem;
+  text-align: center;
+  transition: all 0.3s;
+}

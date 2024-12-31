@@ -1,0 +1,22 @@
+.authHeading {
+  margin-bottom: 2.5rem;
+}
+
+.authHeading.center {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 30rem;
+}
+
+.authHeading > h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+
+@media screen and (max-width: 576px) {
+  .authHeading > h1 {
+    font-size: 2.125rem;
+  }
+}

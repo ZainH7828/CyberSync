@@ -1,0 +1,126 @@
+.assigneesContainer {
+  position: relative;
+  width: 100%;
+}
+
+.assigneesContainer > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.assigneesContainer > ul > li > .imgArea,
+.suggestedUsers > ul > li > .imgArea {
+  background: var(--primary-extra-light);
+  color: var(--primary);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.125rem var(--dashboard-bg);
+}
+
+.assigneesContainer > ul > li + li {
+  margin-left: -0.625rem;
+}
+
+.assigneesDropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: calc(100% + 0.5rem);
+  background: var(--white);
+  z-index: 1;
+  min-width: 18rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  left: 50%;
+  gap: 1rem;
+  transform: translate(-50%, 0%);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.assigneesDropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 1rem;
+  height: 1rem;
+  background: var(--white);
+  z-index: -1;
+}
+
+.selectedAssigneesArea {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  white-space: nowrap;
+}
+
+.selectedAssigneesArea > li {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--primary-extra-light);
+  border-radius: 2rem;
+  color: var(--primary);
+  padding-right: 0.875rem;
+  font-size: 0.875rem;
+  align-items: center;
+}
+
+.selectedAssigneesArea > li > .imgArea {
+  background: var(--primary);
+  color: var(--text-light);
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+}
+
+.selectedAssigneesArea > li > button {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.selectedAssigneesArea > li > button > svg {
+  height: 0.875rem;
+  cursor: pointer;
+}
+
+.searchArea > input {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  outline: 0;
+}
+
+.suggestedUsers > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.suggestedUsers > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.suggestedUsers > ul > li:hover {
+  color: var(--primary);
+}

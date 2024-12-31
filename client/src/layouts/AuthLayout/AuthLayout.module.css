@@ -1,0 +1,52 @@
+.authArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.rightImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39.5%;
+  height: 100%;
+  border-radius: 1.25rem 0 0 1.25rem;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.authHeader {
+  padding: 1.25rem 0;
+}
+
+.logo {
+  padding: 0 0.5rem;
+}
+
+.logo > img {
+  height: 1.6875rem;
+}
+
+.authBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.authBody > * {
+  margin: auto;
+}
+
+.onBoardingBody > * {
+  margin: 0  auto;
+}
+
+@media screen and (max-width: 576px) {
+  .rightImg {
+    display: none;
+  }
+}

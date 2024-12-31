@@ -1,0 +1,50 @@
+.inputArea {
+  position: relative;
+}
+
+.inputArea > label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.inputArea > input:not([type="checkbox"]) {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  height: 3.25rem;
+  padding: 0 1.25rem;
+  outline: 0;
+}
+
+.inputArea > input[type="checkbox"] + label {
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #999;
+  margin: 0;
+}
+
+.inputArea > input:disabled {
+  background: #f7f7f7;
+  color: #666;
+}
+
+.checkboxOrRadioArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dateDropdown {
+  position: absolute;
+  bottom: calc(100% - 1.5rem);
+  left: 50%;
+  transform: translate(-50%,-5%);
+  background: var(--background);
+  padding: 0.5rem;
+  min-width: 25rem;
+  border-radius: 0.75rem;
+  z-index: 9999;
+  overflow: visible;
+}

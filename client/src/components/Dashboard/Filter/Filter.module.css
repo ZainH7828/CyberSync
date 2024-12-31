@@ -1,0 +1,107 @@
+.filterArea {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.inputArea {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  background: var(--background);
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.inputArea > svg {
+  height: 0.875rem;
+}
+
+.inputArea > input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 15rem;
+}
+
+.filterBtn {
+  position: relative;
+}
+
+.filterBtn > button {
+  display: flex;
+  background: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid var(--primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.3125rem 1rem;
+  color: var(--primary);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filterBtn > button > svg {
+  height: 0.875rem;
+}
+
+.filterDropDown {
+  position: absolute;
+  display: flex;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  flex-direction: column;
+  background: var(--background);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
+  padding: 0.375rem;
+  text-wrap: nowrap;
+  gap: 0.125rem;
+  z-index: 10;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.filterDropDown > li > button {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0.375rem 1rem;
+  border-radius: 0.375rem;
+  text-align: left;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.filterDropDown > li > button:hover,
+.filterDropDown > li > button.active {
+  background: var(--primary-extra-x-light);
+  color: var(--primary);
+}
+
+.filterDropDown > li > button.danger {
+  color: var(--danger);
+}
+
+.filterDropDown > li > button.danger:hover {
+  background: var(--danger-light);
+}
+
+@media screen and (max-width: 576px) {
+  .filterDropDown {
+    left: auto;
+    right: 0;
+  }
+
+  .filterBtn > button.active {
+    background: var(--primary);
+    color: var(--text-light);
+  }
+
+  .filterBtn > button > span > span {
+    display: none;
+  }
+}

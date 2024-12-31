@@ -1,0 +1,56 @@
+.dropDown {
+  position: absolute;
+  top: calc(100% + 0.625rem);
+  background: var(--background);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.dropDown > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dropDown > ul > li {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.dropDown > ul > li > svg {
+  height: 1.125rem;
+  transition: all 0.3s;
+}
+
+.dropDown > ul > li:is(:hover, .active) {
+  color: var(--primary);
+  background: var(--primary-extra-light);
+}
+
+.dropDown > ul > li:not(.active) > svg {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropDown > .btnArea {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.875rem;
+}
+
+.dropDown > .btnArea > button {
+  background: var(--primary);
+  color: var(--text-light);
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}

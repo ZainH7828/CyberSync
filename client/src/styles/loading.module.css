@@ -1,0 +1,50 @@
+.loadingSection {
+  position: relative;
+  display: flex;
+  background: var(--primary-extra-x-light);
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.loadingContainer {
+  margin: auto;
+}
+
+.loadingArea {
+  width: 100%;
+  max-width: 27rem;
+  background: var(--background);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.loadingArea > img {
+  height: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.loadingArea > h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0;
+}
+
+.loadingArea svg {
+  height: 2rem;
+  color: var(--primary);
+}
+
+.loadingArea > p {
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.loadingArea > p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,191 @@
+.report-sheet{
+    background: white;
+    border-radius: 25px;
+    padding: 3%;
+}
+.report-sheet .section-1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.report-sheet .content-sec {
+    min-width: 700px; /* Set minimum width for col-1 */
+    flex: 1 1 700px;  /* Allows flex-grow and flex-shrink while maintaining the minimum width */
+}
+
+.report-sheet .chart-sec {
+    max-height: 400px;
+    max-width: 400px;
+    margin-bottom: 35px;
+    flex: 1; 
+}
+
+.report-sheet .heading h3{
+    font-size:28px;
+    font-weight: 700;
+    line-height: 33.6px;
+    text-align: left;
+    margin-left: 22px;
+    margin-bottom: 15px;
+}
+.report-sheet .heading p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #4F4F4F;
+    margin-bottom: 25px;
+}
+.report-sheet .heading h6{
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #4F4F4F;
+    margin-bottom: 25px;
+}
+.report-sheet .tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.report-sheet .tags span{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: white;
+    background: black;
+    border-radius: 30px;
+    padding: 8px 15px;
+}
+
+.report-sheet .info-list{
+    border: 1px solid #0000001A;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+
+.report-sheet .info-list ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.report-sheet .info-list ul li {
+    min-width: 240px;
+    flex: 1 1 240px; /* Allows items to grow, shrink, and set a starting width */
+    max-width: 100%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    position: relative;
+}
+.report-sheet .info-list ul li:after{
+    position: absolute;
+    content: '';
+    height: 70%;
+    width: 1px;
+    background: #E6EDFF;
+    right: 0;
+    top: 15%;
+}
+.report-sheet .info-list ul li:last-child:after{
+    display: none;
+}
+.report-sheet .info-list ul li h5{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: left;
+}
+
+.report-sheet .info-list ul li p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.report-sheet .report-table{
+    margin-bottom: 35px;
+}
+.report-sheet .report-table .table-sec{
+    border-radius: 10px;
+    border: 1px solid #D0D4E4;
+}
+.report-sheet .report-table table{
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #D0D4E4;
+    margin: 0;
+}
+.report-sheet .report-table .heading-f{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: left;
+    color: #4BB2E0;
+    margin-bottom: 25px;
+}
+.report-sheet .report-table .heading-s{
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-align: left;
+    margin-bottom: 25px;
+    color: #F97367;
+}
+.report-sheet .report-table thead tr th{
+    font-weight: 400;
+    color: #4F4F4F;
+    padding: 10px;
+
+}
+.report-sheet .report-table tr {
+    border-color: #D0D4E4;
+}
+.report-sheet .report-table tr .status {
+    background: #FDAB3D;
+    color: white;
+    text-align: center;
+}
+.report-sheet .report-table tr td{
+    font-weight: 400;
+    color: #4F4F4F;
+    border-color: #D0D4E4;
+    padding: 10px;
+}
+
+.apexcharts-legend {
+    display: flex;
+}
+.apexcharts-legend-series {
+    justify-content: center;
+    width: 40%;
+}
+
+.report-chart {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    justify-content: center; 
+    height: 100%;           
+    border: 1px solid #0000001F;
+    border-radius: 8px;
+    padding: 30px 0 20px 0;
+}
+
+.chart-wrap {
+    text-align: center; 
+    margin: 0 auto;    
+}
+.report-chart h4{
+    font-size: 18px;
+    font-weight: 700;
+}

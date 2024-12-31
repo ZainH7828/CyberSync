@@ -1,0 +1,70 @@
+.selectArea {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.selectArea > label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.selectArea > p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-weight: 400;
+  gap: 0.75rem;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  height: 3.25rem;
+  padding: 0 1.25rem;
+  outline: 0;
+  transition: background 0.3s;
+}
+
+.selectArea > p > svg {
+  height: 1rem;
+  color: var(--primary);
+}
+
+.selectDropdown {
+  
+  position: absolute;
+  white-space: nowrap;
+  background: var(--background);
+  left: 50%;
+  top: 100%;
+  min-width: 100%;
+  padding: 0.375rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, 0.5rem);
+  z-index: 1;
+  max-height: 30rem;
+  overflow-y: scroll;
+  height: 120px;
+  
+}
+
+.selectDropdown > li > button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  font-weight: 500;
+  width: 100%;
+  padding: 0.375rem 1.125rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.selectDropdown > li > button:hover,
+.selectDropdown:not(:hover) .selected {
+  background: var(--primary-extra-x-light);
+  color: var(--primary);
+}

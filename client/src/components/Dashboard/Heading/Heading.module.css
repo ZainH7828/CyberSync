@@ -1,0 +1,41 @@
+.headingArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heading > .imgArea > svg {
+  height: 2.375rem;
+  color: var(--primary);
+}
+
+.headingDetail > h1 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.headingDetail > p {
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 576px) {
+  .headingArea {
+    padding-top: 1rem;
+  }
+
+  .headingDetail > h1 {
+    font-size: 1.375rem;
+  }
+
+  .headingArea > a {
+    align-self: flex-end;
+  }
+}

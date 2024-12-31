@@ -1,0 +1,31 @@
+.subCategoryPopup {
+  max-width: 40rem;
+}
+
+.body {
+  padding: 2rem 0;
+}
+
+.labelArea {
+  width: 100%;
+}
+
+.labelArea > input {
+  display: none;
+}
+
+.labelArea > span {
+  display: block;
+  border: 1px solid var(--primary);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: var(--primary);
+  background: var(--primary-extra-x-light);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.labelArea > input:checked + span {
+  background: var(--primary);
+  color: var(--white);
+}

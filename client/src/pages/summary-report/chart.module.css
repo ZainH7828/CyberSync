@@ -1,0 +1,159 @@
+
+.dashboard {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+}
+.chartTitle{
+  display: ruby-text;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 18px;
+
+  
+}
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.cardTitle {
+  font-size: 16px;
+  margin-bottom: 16px;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px 6px 0 0;
+}
+.chartTitle2{
+  margin-top: 0%;
+  margin-left: 18%;
+  color: #2E2E30;
+  font-size: 13.11px;
+ 
+}
+.chartFlex{
+  
+  margin-top: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-top: 16px;
+}
+.dashboardHeader h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.legend ul{
+    
+  position: relative;
+  padding: 0;
+  
+}
+.dashboardHeader p {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.dashboardContent {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+  
+}
+
+.legend {
+  margin-right: 40px;
+  margin-top: 15%;
+}
+
+.legend h3 {
+  
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.legendItem {
+
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+}
+
+.legendMarker {
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  
+}
+
+.legendMarker.inProgress {
+  background-color: #FFA726; 
+}
+
+.legendMarker.notStarted {
+  background-color: #42A5F5; 
+}
+
+.legendMarker.delayed {
+  background-color: #EF5350;
+}
+
+.legendMarker.done {
+  color: #66BB6A; 
+}
+
+.Govern{
+ color: #FFA726; 
+}
+
+.Identify{
+  color: #42A5F5; 
+  margin-left: 5%;
+}
+
+.Respond {
+  color: #EF5350;
+}
+
+.Recover {
+  color: #7b9db8;  
+  margin-left: 5%;
+}
+
+.Protect {
+  color: #4d6172;  
+ 
+}
+
+
+
+.chartContainer {
+  border-bottom: 1px solid #ccc; 
+  padding-bottom: 16px;
+  position: relative;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.chartContainer h1{
+  color: #42A5F5;
+}
+.chartContainer h4 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+

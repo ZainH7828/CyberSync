@@ -1,0 +1,370 @@
+.dashboardArea {
+  --sideBarWidth: 17.25rem;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: var(--dashboard-bg);
+}
+
+.dashboardBody {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  padding: 3rem 1.75rem;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  min-width: var(--sideBarWidth);
+  max-width: var(--sideBarWidth);
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1.5rem;
+  gap: 1.875rem;
+  height: 100vh;
+  transition: margin-left 0.3s, box-shadow 0.3s;
+}
+
+.sideBar.hidden {
+  margin-left: calc(var(--sideBarWidth) * -1);
+  box-shadow: none;
+}
+
+.sideBar > .header {
+  position: relative;
+}
+
+.sideBar > .header > img {
+  height: 1.675rem;
+}
+
+.sideBar > .header > button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.sideBar > .header > button ~ img {
+  margin-left: 0.875rem;
+}
+
+.sideBar > .header > button.sidebarToggle {
+  position: absolute;
+  top: 50%;
+  right: -1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: var(--text-light);
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  transition: transform 0.3s;
+}
+
+.sideBar.hidden > .header > button {
+  transform: translate(calc(50% + 2.75rem), -80%) rotate(180deg);
+}
+
+.sideBar > .header > button > svg {
+  height: 1rem;
+}
+
+.sideBar > .body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: auto;
+}
+
+
+
+.sideBar ::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+  margin-left: 2px;
+
+}
+
+.sideBar > .body > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sideBar > .body > ul > li ul {
+  padding-left: 1.125rem;
+}
+
+.sideBar > .body > ul > li > :is(a, p),
+.sideBar > .body > ul > li > ul > li > :is(a, p),
+.sideBar > .body > ul > li > ul > li > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.125rem;
+  border-radius: 0.5rem;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.sideBar > .body > ul > li > :is(a, p) > span,
+.sideBar > .body > ul > li > ul > li > :is(a, p) > span,
+.sideBar > .body > ul > li > ul > li > ul > li > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sideBar > .body > ul > li > ul > li > ul > li {
+  position: relative;
+}
+
+.sideBar > .body > ul > li > ul > li > ul {
+  padding-left: 2rem;
+}
+
+.sideBar > .body > ul > li > ul > li > ul > li::before,
+.sideBar > .body > ul > li > ul > li > ul > li::after {
+  content: "";
+  position: absolute;
+  left: -0.625rem;
+}
+
+.sideBar > .body > ul > li > ul > li > ul > li::before {
+  top: -0.625rem;
+  height: 100%;
+  border-left: 1px solid #aaa;
+}
+
+.sideBar > .body > ul > li > ul > li > ul > li:last-child:before {
+  height: 72.5%;
+}
+
+.sideBar > .body > ul > li > ul > li > ul > li::after {
+  width: 0.625rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.sideBar > .body > ul:not(.userCategoryUl) > li > a {
+  font-weight: 600;
+}
+
+.sideBar > .body > ul.userCategoryUl {
+  padding: 0px 6px;
+  font-weight: 400;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+
+.sideBar > .body > ul.userTeamUl {
+  gap: 0.375rem;
+}
+
+.sideBar > .body > ul.userCategoryUl ul {
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.sideBar > .body > ul li > :is(a, p) > svg,
+.sideBar > .body > ul.userCategoryUl > li > :is(a, p) > svg {
+  height: 0.875rem;
+  min-width: 0.75rem;
+}
+
+.sideBar > .body > ul > li > a > svg {
+  width: 1.3125rem;
+  height: 1.3125rem;
+}
+
+
+.sideBar > .body > ul > li:is(.active, :hover) > a,
+.sideBar > .body > ul > li > ul > li > :is(a, p):hover,
+.sideBar > .body > ul > li > ul > li > ul > li:is(.active, :hover) {
+  background-color: var(--primary-extra-light);
+  color: var(--primary);
+}
+
+.sideBar > .body > ul > li.active > :is(a, p) {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.sideBar > .body > ul > li > :is(a, p) {
+  background-color: transparent;
+  color: inherit;
+}
+
+.sideBar > .body > ul.userCategoryUl > li.active > :is(a, p),
+.sideBar > .body > ul.userCategoryUl > li:has(li.active) > :is(a, p) {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+
+.sideBar > .footer,
+.userDetailArea,
+.userDetailArea > button {
+  display: flex;
+  align-items: center;
+}
+
+.sideBar > .footer {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sideBar > .footer > * {
+  width: 100%;
+}
+
+.userDetailArea {
+  position: relative;
+  justify-content: space-between;
+}
+
+.userDetailArea > button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.userDetailArea > button.logout {
+  padding: 0.375rem 0 0.375rem 0.375rem;
+}
+
+.userDetailArea > button > img,
+.userDetailArea > button > .userImgArea {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--primary-extra-light);
+}
+
+.userDetailArea > button > .userImgArea {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.userDetailArea > button > .detailArea > :is(h3, p) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 9rem;
+}
+
+.userDetailArea > button > .detailArea > h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.125rem;
+}
+
+.userDetailArea > button > .detailArea > p {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.userDetailArea > button > svg {
+  height: 1rem;
+  color: var(--danger);
+}
+
+.organizationDetail {
+  cursor: pointer;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.organizationDetail > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--primary-extra-light);
+  background: var(--primary);
+  border-radius: 0.5rem;
+}
+
+.organizationDetail > p {
+  margin: 0;
+}
+
+.searchDetail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchDetail > :is(button, a) {
+  border-radius: 0.5rem;
+  min-width: 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.searchDetail > .searchArea {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0 0 0 0.75rem;
+  flex: 1 1 auto;
+}
+
+.searchDetail > .searchArea > svg,
+.searchDetail > :is(button, a) > svg {
+  height: 0.875rem;
+}
+
+.searchDetail > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchDetail > .searchArea > input {
+  font-size: 0.875rem;
+  width: 100%;
+  flex: 1 1 auto;
+  height: 2.25rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .dashboardBody {
+    padding: 3rem 1rem;
+  }
+
+  .sideBar {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .sideBar.hidden > .header > button {
+    transform: translate(calc(50% + 1.75rem), -70%) rotate(180deg);
+  }
+}

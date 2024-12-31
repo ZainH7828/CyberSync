@@ -1,0 +1,197 @@
+.tableListsContainer {
+  width: 100%;
+  background: var(--background);
+  border-radius: 0.625rem;
+  font-size: 0.875rem;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.tableListsArea {
+  width: 100%;
+}
+
+.tableListsArea.overHidden {
+  overflow: auto hidden;
+}
+
+.tableLists {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tableLists :is(th, td) {
+  padding: 0.8125rem 1.25rem;
+}
+
+.tableLists th {
+  background: var(--text-color);
+  color: var(--text-light);
+  font-weight: 400;
+  text-wrap: nowrap;
+}
+
+.tableLists > thead > tr > th:first-child {
+  border-top-left-radius: 0.625rem;
+}
+
+.tableLists > thead > tr > th:last-child {
+  border-top-right-radius: 0.625rem;
+}
+
+.tableLists > tbody > tr:last-child > td:first-child {
+  border-bottom-left-radius: 0.625rem;
+}
+
+.tableLists > tbody > tr:last-child > td:last-child {
+  border-bottom-right-radius: 0.625rem;
+}
+
+.actionsArea {
+  position: relative;
+}
+
+.actionsArea > button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  color: var(--primary);
+  transition: all 0.3s;
+}
+
+.actionsArea > button > svg {
+  height: 0.875rem;
+}
+
+.actionsArea > ul {
+  position: absolute;
+  white-space: nowrap;
+  top: calc(100% + 0.25rem);
+  right: 0.375rem;
+  background: var(--background);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.375rem;
+  min-width: 9rem;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.tableLists :is(th, td).actionsTd {
+  padding: 0;
+  text-align: center;
+}
+
+.actionsTd:hover .actionsArea > button {
+  background: var(--primary-extra-x-light);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.actionsTd:not(:hover) .actionsArea > ul {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.actionsArea > ul > li + li {
+  margin-top: 0.125rem;
+}
+
+.actionsArea > ul > li > :is(a, button) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.75rem;
+  padding: 0.3125rem 1rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--primary);
+  border-radius: 0.375rem;
+  transition: all 0.3s;
+}
+
+.actionsArea > ul > li > :is(a, button):hover {
+  background: var(--primary-extra-x-light);
+}
+
+.actionsArea > ul > li > :is(a, button).danger {
+  color: var(--danger);
+}
+
+.actionsArea > ul > li > :is(a, button).danger:hover {
+  background: var(--danger-light);
+}
+
+.actionsArea > ul > li > :is(a, button) > svg {
+  height: 1rem;
+  width: 1rem;
+  object-fit: contain;
+}
+
+.smallTd {
+  width: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  font-size: 0.75rem;
+  border-radius: 3rem;
+}
+
+.badge.success {
+  background: #e1fcef;
+  color: #14804a;
+}
+
+.badge.danger {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.paginationArea {
+  padding: 0.8125rem 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.paginationArea > button {
+  background: transparent;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.paginationArea > button:disabled {
+  color: #999;
+}
+
+.paginationArea > button:not(:is(:disabled, .active)):hover {
+  background: var(--primary-extra-x-light);
+  color: var(--primary);
+}
+
+.paginationArea > button.active {
+  background: var(--primary);
+  color: var(--text-light);
+}
+
+.paginationArea > button > svg {
+  height: 0.75rem;
+}
+
+.tableLists > tbody > tr:nth-last-child(2) .actionsArea > ul,
+.tableLists > tbody > tr:last-child .actionsArea > ul {
+  top: auto;
+  bottom: 100%;
+}
