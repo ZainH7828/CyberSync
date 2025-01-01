@@ -75,10 +75,10 @@ const OrganizationUI: React.FC<OrganizationUIType> = ({
       label: "1 year",
       value: "1 year",
     },
-    {
-      label: "Custom",
-      value: "custom",
-    },
+    // {
+    //   label: "Custom",
+    //   value: "custom",
+    // },
   ];
 
   // States

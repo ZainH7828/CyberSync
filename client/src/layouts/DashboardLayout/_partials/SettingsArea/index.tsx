@@ -54,15 +54,15 @@ const SettingsArea = () => {
       <div className={style.settingsArea}>
         {visibility && (
           <ul className={style.settingsPopup} ref={settingsAreaRef}>
-            {context?.userData.value?.rights.downloadReport ? (
+            {/* {context?.userData.value?.rights.downloadReport ? (
               <li>
                 <button type="button" onClick={() => setReportVisibility(true)}>
                   <DownloadIcon />
                   <span>Download Report</span>
                 </button>
               </li>
-            ) : null}
-            <li>
+            ) : null} */}
+            {/* <li>
               <Link
                 href={routes.users.summaryReport}
                 className="flex items-center gap-2"
@@ -74,7 +74,7 @@ const SettingsArea = () => {
                 />
                 <span style={{ marginLeft: "10px" }}>Summary Report</span>
               </Link>
-            </li>
+            </li> */}
             {context?.userData.value?.rights.manageTeam ? (
               <li>
                 <Link href={routes.users.teamMembers}>
@@ -83,7 +83,7 @@ const SettingsArea = () => {
                 </Link>
               </li>
             ) : null}
-            {context?.userData.value?.rights.category?.add ||
+            {/* {context?.userData.value?.rights.category?.add ||
             context?.userData.value?.rights.category?.edit ? (
               <li>
                 <Link href={routes.users.categoriesTask}>
@@ -91,7 +91,7 @@ const SettingsArea = () => {
                   <span>Categories & Task</span>
                 </Link>
               </li>
-            ) : null}
+            ) : null} */}
             {/* <li>
               <Link href={routes.users.selfAssessment.main}>
                 <WelldoneIcon />
